@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="cafe.js"></script>
-    <title>Café</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Cafetería Cofibred</title>
 </head>
 <body>
-    <hi>Café</hi>
-</body>
+    <h1>Bienvenido a cofibred!</h1>
+
+    <div class="seccion">
+        <h2>Ingresa tu nombre</h2>
+        <input type="text" id="nombreUsuario">
+    </div>
+    
+    <div class ="seccion">
+        <h2>1. Elige tu bebida</h2>
+        <div id = "menuBebidas"></div>
+    </div>
+
+    <div class ="seccion">
+        <h2>2. Elige tu tipo de leche</h2>
+        <div id = "menuLeche"></div>
+    </div>
+
+    <div class ="seccion">
+        <h2>3. Total de la cuenta</h2>
+        <p id ="resultado"></p>
+        <button onclick="nuevoPedido()">Nuevo pedido</button>
+    </div>
+</body
 </html>
