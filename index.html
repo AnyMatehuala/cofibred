@@ -1,34 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="cafe.js"></script>
+    <script defer src="logica.js" type="module"></script>
+    <script defer src="interfaz.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
     <title>Cafetería Cofibred</title>
 </head>
 <body>
-    <h1>Bienvenido a cofibred!</h1>
-
-    <div class="seccion">
-        <h2>Ingresa tu nombre</h2>
-        <input type="text" id="nombreUsuario">
-    </div>
-    
-    <div class ="seccion">
-        <h2>1. Elige tu bebida</h2>
-        <div id = "menuBebidas"></div>
+    <div id="pantallaInicio">
+        <h1>Bienvenido a Cofibred</h1>
+        <p>Disfruta bebidas deliciosas con un toque natural mexicano</p>
+        <button id="iniciarPedidoBtn">Iniciar pedido</button>
     </div>
 
-    <div class ="seccion">
-        <h2>2. Elige tu tipo de leche</h2>
-        <div id = "menuLeche"></div>
-    </div>
+    <main id="contenidoPedido" style="display: none;">
+        <h1>Bienvenido a Cofibred</h1>
 
-    <div class ="seccion">
-        <h2>3. Total de la cuenta</h2>
-        <p id ="resultado"></p>
-        <button onclick="nuevoPedido()">Nuevo pedido</button>
-    </div>
-</body
+        <input type="text" id="nombreUsuario" placeholder="Ingresa tu nombre">
+
+        <h2>Selecciona tu bebida</h2>
+        <div id="menuBebidas"></div>
+
+        <div id="mensajeLeche">Selecciona tu tipo de leche:</div>
+        <div id="menuLeche" style="display: none;"></div>
+
+        <div id="resultado"></div>
+
+        <button id="nuevoPedidoBtn">Nuevo pedido</button>
+        <button id="volverInicioBtn">Volver al inicio</button>
+
+        <h2>Historial de pedidos</h2>
+        <button id="mostrarHistorialBtn">Mostrar historial de pedidos</button>
+        <button id="borrarHistorialBtn">Borrar historial de pedidos</button>
+        <button id="calcularTotalBtn">Total de pedidos</button>
+        <p id="totalAcumulado"></p>
+
+        <div id="historialPedidos" style="display: none;"></div>
+    </main>
+</body>
 </html>
